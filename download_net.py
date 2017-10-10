@@ -26,3 +26,20 @@ def download_net(data_dir):
         # Extract
         with zipfile.ZipFile(local_zip_file, 'r') as zip_ref:
             zip_ref.extractall(data_dir)
+def download_vgg(data_dir):
+    print("Downloading pretrained VGG19")
+    url = "http://www.vlfeat.org/matconvnet/models/beta16/imagenet-vgg-verydeep-19.mat"
+    if not os.path.exists(data_dir):
+        os.makedirs(data_dir)
+
+    model_name = os.path.split(url)[-1]
+    local_file = os.path.join(data_dir, model_name)
+
+    if not os.path.exists(local_file):
+        # Download
+        model_url = urllib.request.urlopen(url)
+        with open(local_file, 'wb') as output:
+            output.write(model_url.read())
+        print("VGG19 Downloaded Successfully")
+    else:
+        print("Model already downloaded")
