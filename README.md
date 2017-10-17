@@ -3,7 +3,7 @@
 The repository accopanying the first workshop of ML@B's Fall Lineup.
 
 [Slides](https://docs.google.com/presentation/d/1rWnYs2vFaJ9wD75UQhlFvW1V4IVf-ZTGhg7XKi8gAg0/edit?usp=sharing)
-Video
+[Video](https://youtu.be/UIN1JiEkclU)
 
 This workshop covers DeepDream, Neural Style, and Fast Style Transfer. 
 
